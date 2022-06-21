@@ -33,7 +33,7 @@ package object hmrc extends ServicesConfiguration {
     ContentPage("Navigate To Start Page", ""),
     FormPage("Becoming Adoptive Or Parental Order Parents", "becoming-adoptive-or-parental-order-parents", "value" -> "false"),
     FormPage("Are You The Child’s Biological Father?", "are-you-the-biological-father", "value" -> "true"),
-    FormPage("Responsibility Caring For Child?", "will-you-have-reponsibililty-for-caring", "value" -> "true"),
+    FormPage("Responsibility Caring For Child?", "will-you-have-responsibility-for-caring", "value" -> "true"),
     FormPage("Time Off Work To Care For Child?", "take-time-off-to-care-for-child", "value" -> "true"),
     FormPage("What Is Your Name?", "what-is-your-name", "firstName" -> "foo", "lastName" -> "bar"),
     FormPage("What Is Your Nino?", "what-is-your-national-insurance-number", "value" -> "AA123456A"),
