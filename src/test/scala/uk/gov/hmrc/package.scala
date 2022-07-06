@@ -27,7 +27,7 @@ package object hmrc extends ServicesConfiguration {
   val route: String   = "/fill-online/apply-for-statutory-paternity-pay"
 
   private val dobToday: LocalDate = LocalDate.now
-
+  private val dueDate: LocalDate = dobToday.minusDays(1)
 
   val journey: List[Page] = List(
     ContentPage("Navigate To Start Page", ""),
@@ -40,7 +40,8 @@ package object hmrc extends ServicesConfiguration {
     FormPage("Has The Baby Been Born Yet?", "has-the-baby-been-born", "value" -> "true"),
     FormPage("What date was the baby born?", "what-date-was-the-baby-born", fieldsForDate(dobToday): _*),
     FormPage("Statutory Paternity Pay Start On Day Baby Was Born?", "want-pay-to-start-on-birth-date", "value" -> "true"),
-    FormPage("How Long Will You Be On Paternity Leave For?", "how-long-will-you-be-on-leave", "value" -> "twoWeeks"),
+    FormPage("What date was the baby due?", "what-date-is-the-baby-due", fieldsForDate(dueDate): _*),
+    FormPage("How long will you be on paternity leave for?", "how-long-will-you-be-on-leave", "value" -> "twoWeeks"),
     ContentPage("Check Your Answers", "check-your-answers"),
     ContentPage("Next Steps Page", "next-steps"),
     ContentPage("Print Form Page", "print-form")
